@@ -1,5 +1,6 @@
-package org.grasswort.sort;
+package org.grasswort.merger;
 
+import org.grasswort.sort.IMathArraySort;
 import org.grasswort.sort.util.IntArrayUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,27 +13,27 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author xuliangliang
  * @Description
- * @Date 2020/7/12
+ * @Date 2020/7/15
  */
-class BubbleSortTest {
+class MergerSortTest {
 
-    private IMathArraySort bubbleSort;
+    private IMathArraySort mergerSort;
 
     @BeforeEach
     void setUp() {
-        bubbleSort = new BubbleSort();
+        mergerSort = new MergerSort();
     }
 
     @AfterEach
     void tearDown() {
-        bubbleSort = null;
+        mergerSort = null;
     }
 
     @RepeatedTest(1000)
     void sort() {
         int[] array = IntArrayUtil.randomArray(10000, Integer.MIN_VALUE, Integer.MAX_VALUE);
         int[] duplicate = IntArrayUtil.copyArray(array);
-        bubbleSort.sort(array);
+        mergerSort.sort(array);
         Arrays.sort(duplicate);
         assertTrue(IntArrayUtil.isEqual(array, duplicate));
     }
