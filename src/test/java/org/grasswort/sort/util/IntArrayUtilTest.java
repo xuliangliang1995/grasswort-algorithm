@@ -1,11 +1,10 @@
 package org.grasswort.sort.util;
 
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author xuliangliang
@@ -14,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class IntArrayUtilTest {
 
-    @Test
+    //@RepeatedTest(1000)
     public void randomArray() {
         int size = 1000;
         int minimum = -1000;
