@@ -1,10 +1,8 @@
-package org.grasswort.merger;
-
-import org.grasswort.sort.IMathArraySort;
+package org.grasswort.sort;
 
 /**
  * @author xuliangliang
- * @Description 归并排序
+ * @Description 归并排序 O(N * logN)
  * @Date 2020/7/15
  */
 public class MergerSort implements IMathArraySort {
@@ -40,23 +38,16 @@ public class MergerSort implements IMathArraySort {
         int[] sortedArray = new int[j - i + 1];
         while (L <= mid && R <= j) {
             if (array[L] < array[R]) {
-                sortedArray[k] = array[L];
-                L++;
+                sortedArray[k++] = array[L++];
             } else {
-                sortedArray[k] = array[R];
-                R++;
+                sortedArray[k++] = array[R++];
             }
-            k++;
         }
         while (L <= mid) {
-            sortedArray[k] = array[L];
-            L++;
-            k++;
+            sortedArray[k++] = array[L++];
         }
         while (R <= j) {
-            sortedArray[k] = array[R];
-            R++;
-            k++;
+            sortedArray[k++] = array[R++];
         }
         for (int l = 0; l < sortedArray.length; l++) {
             array[i + l] = sortedArray[l];

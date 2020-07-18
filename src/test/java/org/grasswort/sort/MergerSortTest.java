@@ -1,6 +1,5 @@
-package org.grasswort.merger;
+package org.grasswort.sort;
 
-import org.grasswort.sort.IMathArraySort;
 import org.grasswort.sort.util.IntArrayUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author xuliangliang
  * @Description
- * @Date 2020/7/15
+ * @Date 2020/7/18
  */
-class MergerSortTest {
+public class MergerSortTest {
 
     private IMathArraySort mergerSort;
 
