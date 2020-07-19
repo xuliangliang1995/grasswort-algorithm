@@ -15,6 +15,19 @@ public class HeapSort implements IMathArraySort {
      */
     @Override
     public void sort(int[] array) {
+        for (int i = array.length - 1; i >= 0 ; i--) {
+            heapify(array, i, array.length);
+        }
+        for (int i = 0; i < array.length; i++) {
+            heapify(array, i, array.length);
+        }
+    }
+
+    /**
+     * 方法 2
+     * @param array
+     */
+    private void heapSort2(int[] array) {
         int heapSize = 0;
         for (int i = 0; i < array.length; i++) {
             heapInsert(array, array[i], heapSize);
